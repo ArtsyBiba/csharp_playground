@@ -6,13 +6,16 @@ namespace Giraffe
     {
         static void Main(string[] args)
         {
-            Console.Write("Please, enter first number: ");  
-            string first = Console.ReadLine();
+            Console.WriteLine("Enter your name ");
+            string userName = Console.ReadLine();
+            Console.WriteLine(PrintName(userName));
+        }
 
-            Console.Write("Please, enter second number: ");
-            string second = Console.ReadLine();
+        static string PrintName(string name)
+        {
+            string greeting = "Hello " + name;
 
-            Console.WriteLine("The sum is " + (Convert.ToDouble(first) + Convert.ToDouble(second)));  
+            return greeting;
         }
     }
 }

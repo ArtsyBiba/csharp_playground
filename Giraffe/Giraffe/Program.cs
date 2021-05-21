@@ -6,18 +6,14 @@ namespace Giraffe
     {
         static void Main(string[] args)
         {
-            string characterName = "Alex";
-            char grade = 'A';
+            string phrase = "There once was a man named";
 
-            int characterAge = 55;
-            double floatAge = 27.5;
+            string[] subs = phrase.Split(' ');
 
-            bool isMale = true;
-
-            Console.WriteLine("There once was a man named " + characterName);
-            Console.WriteLine("He was " + characterAge + " years old");
-            Console.WriteLine("He really liked the name " + grade);
-            Console.WriteLine("But he didn't like being " + floatAge);
+            foreach (var sub in subs)
+            {
+                Console.WriteLine($"Substring: {sub}");
+            }
         }
     }
 }

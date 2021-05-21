@@ -6,14 +6,12 @@ namespace Giraffe
     {
         static void Main(string[] args)
         {
-            string phrase = "There once was a man named";
+            Console.Write("Please, enter your name: ");
+            
+            string input = Console.ReadLine();
 
-            string[] subs = phrase.Split(' ');
-
-            foreach (var sub in subs)
-            {
-                Console.WriteLine($"Substring: {sub}");
-            }
+            Console.WriteLine("Hello " + input);
+            
         }
     }
 }

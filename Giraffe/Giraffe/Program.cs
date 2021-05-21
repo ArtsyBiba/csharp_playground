@@ -6,16 +6,32 @@ namespace Giraffe
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter your name ");
-            string userName = Console.ReadLine();
-            Console.WriteLine(PrintName(userName));
-        }
+            Console.WriteLine("Enter your first number ");
+            double firstNumber = Convert.ToDouble(Console.ReadLine());
 
-        static string PrintName(string name)
-        {
-            string greeting = "Hello " + name;
+            Console.WriteLine("Enter your second number ");
+            double secondNumber = Convert.ToDouble(Console.ReadLine());
 
-            return greeting;
+            Console.WriteLine("Enter your operator ");
+            string oper = Console.ReadLine();
+
+            if (oper == "*") 
+            {
+                Console.WriteLine(firstNumber * secondNumber);
+            } else if (oper == "/")
+            {
+                Console.WriteLine(firstNumber / secondNumber);
+            } else if (oper == "+")
+            {
+                Console.WriteLine(firstNumber + secondNumber);
+            } else if (oper == "-")
+            {
+                Console.WriteLine(firstNumber - secondNumber);
+            } else
+            {
+                Console.WriteLine("One of your inputs was invalid");
+            }
+            
         }
     }
 }

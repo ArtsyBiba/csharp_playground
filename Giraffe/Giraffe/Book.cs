@@ -9,17 +9,36 @@ namespace Giraffe
         public string title;
         public string author;
         public int pages;
+        private string language;
+        public static int bookCount = 0;
 
-        public Book(string author, string title, int pages)
+        public Book(string author, string title, int pages, string language)
         {
             this.title = title;
             this.author = author;
             this.pages = pages;
+            Language = language;
+            bookCount++;
         }
 
-        public void PrintTitle()
+        public string Language
         {
-            Console.WriteLine(title);
+            get { return language; }
+            set
+            {
+                if(value == "English" || value == "French")
+                {
+                    language = value;
+                } else
+                {
+                    language = "n/a";
+                }
+            }
+        }
+
+        public void PrintLanguage()
+        {
+            Console.WriteLine(language);
         }
     }
 }
